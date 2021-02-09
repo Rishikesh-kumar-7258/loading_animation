@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.spinner {
+    position : relative;
+    display: grid;
+    place-items: center;
+
+    div {
+        width: 400px;
+        height: 400px;
+        // background-color: lightsalmon;
+        position: relative;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        border: 15px solid transparent;
+        border-top: 15px solid red;
+        position: absolute;
+        mix-blend-mode: overlay;
+    //  z-index : -1;
+    }
+    p{
+        font-size: 2em;
+    }
+    .spinner1{
+        animation: rotate 1.5s ease-in-out infinite;
+    }
+    .spinner2{
+        animation: rotate 2.5s ease-out infinite;
+        border-top : 15px solid lightgreen;
+    }
+    .spinner3{
+        animation: rotate 2s ease-in-out infinite;
+        border-top : 15px solid lightblue;
+    }
+}
+
+@keyframes rotate {
+    from {
+        tranform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,77 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.spinner {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.spinner div {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 15px solid transparent;
+  border-top: 15px solid red;
+  position: absolute;
+  mix-blend-mode: overlay;
+}
+
+.spinner p {
+  font-size: 2em;
+}
+
+.spinner .spinner1 {
+  -webkit-animation: rotate 1.5s ease-in-out infinite;
+          animation: rotate 1.5s ease-in-out infinite;
+}
+
+.spinner .spinner2 {
+  -webkit-animation: rotate 2.5s ease-out infinite;
+          animation: rotate 2.5s ease-out infinite;
+  border-top: 15px solid lightgreen;
+}
+
+.spinner .spinner3 {
+  -webkit-animation: rotate 2s ease-in-out infinite;
+          animation: rotate 2s ease-in-out infinite;
+  border-top: 15px solid lightblue;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    tranform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    tranform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=index.css.map */
